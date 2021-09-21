@@ -40,12 +40,12 @@ Array
 	function recursiveMassive($arr, $refresher=false) {
 		$padding = 25;
 		if(!$refresher) {
-			echo '<div class="company___section" data-id="'.$arr[ID].'" style="margin-left: '.($padding*$arr[DEPTH_LEVEL]).'px;">'.$arr[NAME].'</div>';
+			echo '<div class="company__section" data-id="'.$arr[ID].'" style="margin-left: '.($padding*$arr[DEPTH_LEVEL]).'px;">'.$arr[NAME].'</div>';
 		}
 		if(array_key_exists('CHILD', $arr)) {
 			foreach ($arr[CHILD] as $key => $section) {
 
-				echo '<div class="company_section" data-id="'.$arr[ID].'" style="margin-left: '.($padding*$section[DEPTH_LEVEL]).'px;">'.$section[NAME].'</div>';
+				echo '<div class="company__section" data-id="'.$arr[ID].'" style="margin-left: '.($padding*$section[DEPTH_LEVEL]).'px;">'.$section[NAME].'</div>';
 				if(array_key_exists('CHILD', $section)) {
 					recursiveMassive($section, 1);
 				}
